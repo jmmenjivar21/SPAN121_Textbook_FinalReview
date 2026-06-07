@@ -1,0 +1,1744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spanish 121 · Repaso Final · Examen Final · Capítulos 1–4</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Space+Mono:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   REPASO FINAL · SEMANA 10 · SPAN 121
+   Comprehensive review for the Final Exam, Capítulos 1–4
+   ═══════════════════════════════════════════════════════════════ */
+
+:root{
+  --navy:#1B2E4F;
+  --navy-light:#2E4977;
+  --terracotta:#C45D3A;
+  --terracotta-light:#E0876A;
+  --gold:#D4A24C;
+  --gold-light:#EBC373;
+  --sage:#6E8C5F;
+  --sage-light:#9CB590;
+  --plum:#7A4E72;
+  --plum-light:#9D6E94;
+  --cream:#FBF7EE;
+  --cream-dark:#F0E9D8;
+  --text:#1a1a1a;
+  --text-light:#444;
+  --text-hint:#666;
+  --soft-shadow:0 4px 16px rgba(27,46,79,0.08);
+  --tile-shadow:0 2px 8px rgba(27,46,79,0.06);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Source Sans 3','Helvetica Neue',Helvetica,Arial,sans-serif;
+  background:var(--cream);color:var(--text);
+  line-height:1.55;font-size:16px;min-height:100vh;
+}
+
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--navy);color:#fff;padding:10px 16px;z-index:9999;text-decoration:none;}
+.skip-link:focus{left:8px;top:8px;}
+*:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px;}
+
+.app{max-width:1200px;margin:0 auto;padding:0 20px 64px;position:relative;}
+
+/* Watermark "F" for Final */
+.app::before{
+  content:'F';
+  position:fixed;top:18px;right:24px;z-index:0;
+  font-family:'Playfair Display',serif;
+  font-size:11rem;font-weight:800;
+  color:var(--navy);opacity:0.04;
+  pointer-events:none;line-height:1;
+}
+
+/* Header */
+.chap-head{
+  margin-top:36px;padding:32px 36px;border-radius:18px;
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);
+  color:#fff;box-shadow:var(--soft-shadow);
+  position:relative;overflow:hidden;
+}
+.chap-head::after{
+  content:'';position:absolute;right:-40px;bottom:-40px;
+  width:200px;height:200px;border-radius:50%;
+  background:radial-gradient(circle,rgba(212,162,76,0.28),transparent 70%);
+}
+.chap-head::before{
+  content:'';position:absolute;left:-30px;top:-30px;
+  width:140px;height:140px;border-radius:50%;
+  background:radial-gradient(circle,rgba(196,93,58,0.22),transparent 70%);
+}
+.header-badge{
+  display:inline-block;font-family:'Space Mono',monospace;
+  font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;
+  background:rgba(212,162,76,0.22);color:var(--gold-light);
+  padding:5px 12px;border-radius:20px;margin-bottom:10px;
+  position:relative;
+}
+.header-title{
+  display:block;font-family:'Playfair Display',serif;
+  font-size:2.2rem;font-weight:700;line-height:1.15;margin-bottom:6px;
+  position:relative;
+}
+.header-subtitle{
+  display:block;font-family:'Space Mono',monospace;
+  font-size:0.85rem;letter-spacing:0.1em;color:var(--gold-light);
+  text-transform:uppercase;position:relative;
+}
+
+/* Progress bar */
+.prog-bar{
+  height:6px;background:var(--cream-dark);border-radius:3px;
+  margin:24px 0 22px;overflow:hidden;
+}
+.prog-fill{
+  height:100%;background:linear-gradient(90deg,var(--terracotta),var(--gold),var(--sage));
+  width:0%;transition:width 0.6s ease-out;
+}
+
+/* Tabs */
+.nav{
+  display:flex;gap:4px;flex-wrap:wrap;
+  background:#fff;padding:6px;border-radius:14px;
+  box-shadow:var(--tile-shadow);margin-bottom:24px;
+}
+.tab{
+  flex:1 1 auto;min-width:120px;padding:12px 16px;
+  background:transparent;border:none;border-radius:10px;
+  font-family:'Source Sans 3',sans-serif;font-size:0.92rem;
+  font-weight:600;color:var(--text-light);cursor:pointer;
+  transition:all 0.18s ease;min-height:44px;
+}
+.tab:hover{background:var(--cream-dark);color:var(--navy);}
+.tab.active{
+  background:var(--navy);color:#fff;
+  box-shadow:0 2px 6px rgba(27,46,79,0.25);
+}
+.tab .pno{
+  font-family:'Space Mono',monospace;font-size:0.7rem;
+  opacity:0.6;margin-right:5px;
+}
+
+/* Sections */
+.sec{display:none;animation:fadein 0.3s ease;}
+.sec.active{display:block;}
+@keyframes fadein{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
+
+.sec-title{
+  font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:700;
+  color:var(--navy);margin-bottom:6px;
+}
+.sec-sub{
+  font-family:'Space Mono',monospace;font-size:0.78rem;letter-spacing:0.12em;
+  color:var(--terracotta);text-transform:uppercase;margin-bottom:22px;
+}
+
+/* Hero */
+.week-hero{
+  background:#fff;padding:26px 30px;border-radius:14px;
+  margin-bottom:24px;box-shadow:var(--tile-shadow);
+  border-left:5px solid var(--terracotta);
+}
+.week-hero h1{
+  font-family:'Playfair Display',serif;font-size:1.55rem;
+  color:var(--navy);margin-bottom:8px;
+}
+.week-hero p{font-size:0.97rem;color:var(--text-light);margin-bottom:14px;}
+.topic-chips{display:flex;flex-wrap:wrap;gap:7px;}
+.chip{
+  display:inline-block;padding:5px 11px;background:var(--cream-dark);
+  color:var(--navy);border-radius:14px;
+  font-size:0.78rem;font-weight:600;
+  font-family:'Space Mono',monospace;letter-spacing:0.02em;
+}
+
+/* Cards */
+.card{
+  background:#fff;padding:22px 26px;border-radius:14px;
+  margin-bottom:18px;box-shadow:var(--tile-shadow);
+}
+.card-title{
+  font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;
+  color:var(--navy);margin-bottom:14px;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.card-title .pill{
+  font-family:'Space Mono',monospace;font-size:0.65rem;
+  background:var(--gold);color:#fff;padding:3px 9px;
+  border-radius:12px;letter-spacing:0.1em;
+}
+
+/* Exam format grid */
+.exam-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:14px;
+}
+.exam-card{
+  background:#fff;padding:20px 22px;border-radius:14px;
+  box-shadow:var(--tile-shadow);position:relative;overflow:hidden;
+  border-top:4px solid var(--gold);
+}
+.exam-card.p1{border-top-color:var(--terracotta);}
+.exam-card.p2{border-top-color:var(--gold);}
+.exam-card.p3{border-top-color:var(--sage);}
+.exam-card.p4{border-top-color:var(--plum);}
+.exam-card .part-num{
+  font-family:'Space Mono',monospace;font-size:0.72rem;
+  color:var(--text-hint);letter-spacing:0.12em;margin-bottom:6px;
+}
+.exam-card h3{
+  font-family:'Playfair Display',serif;font-size:1.25rem;
+  color:var(--navy);margin-bottom:6px;
+}
+.exam-card .time{
+  font-family:'Space Mono',monospace;font-size:0.78rem;
+  color:var(--text-light);margin-bottom:14px;
+}
+.exam-card .pts{
+  display:inline-block;background:var(--cream);padding:5px 11px;
+  border-radius:14px;font-family:'Space Mono',monospace;
+  font-size:0.78rem;font-weight:700;color:var(--navy);
+}
+.exam-card p{
+  font-size:0.9rem;color:var(--text-light);margin-top:10px;line-height:1.5;
+}
+
+/* Schedule */
+.schedule{
+  background:#fff;border-radius:14px;overflow:hidden;
+  box-shadow:var(--tile-shadow);margin-bottom:18px;
+}
+.sched-row{
+  display:grid;grid-template-columns:140px 1fr 1fr 1fr;
+  gap:1px;background:var(--cream-dark);
+}
+.sched-row.head{background:var(--navy);}
+.sched-row.head .sched-cell{
+  color:#fff;font-family:'Space Mono',monospace;
+  font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;padding:11px 14px;
+}
+.sched-cell{background:#fff;padding:14px 16px;font-size:0.9rem;color:var(--text);}
+.sched-cell.day{
+  font-family:'Playfair Display',serif;font-weight:700;color:var(--terracotta);
+  font-size:1.0rem;background:var(--cream);
+}
+.sched-cell strong{color:var(--navy);}
+@media(max-width:760px){
+  .sched-row{grid-template-columns:1fr;}
+  .sched-row.head{display:none;}
+  .sched-cell.day{padding-top:14px;border-top:2px solid var(--terracotta);}
+}
+
+/* Checklist (study tracker w/ localStorage) */
+.checklist-wrap{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:18px;
+}
+.checklist-group{
+  background:var(--cream);padding:18px 20px;border-radius:12px;
+  border-top:3px solid var(--navy);
+}
+.checklist-group.ch1{border-top-color:var(--terracotta);}
+.checklist-group.ch2{border-top-color:var(--gold);}
+.checklist-group.ch3{border-top-color:var(--sage);}
+.checklist-group.ch4{border-top-color:var(--plum);}
+.checklist-group h4{
+  font-family:'Playfair Display',serif;font-size:1.1rem;
+  color:var(--navy);margin-bottom:10px;display:flex;align-items:center;gap:8px;
+}
+.checklist-group h4 .ch-pill{
+  font-family:'Space Mono',monospace;font-size:0.65rem;
+  background:var(--terracotta);color:#fff;padding:3px 8px;
+  border-radius:11px;letter-spacing:0.08em;
+}
+.checklist-group.ch2 h4 .ch-pill{background:var(--gold);color:var(--navy);}
+.checklist-group.ch3 h4 .ch-pill{background:var(--sage);}
+.checklist-group.ch4 h4 .ch-pill{background:var(--plum);}
+.check-item{
+  display:flex;align-items:flex-start;gap:10px;padding:7px 0;
+  border-bottom:1px solid rgba(0,0,0,0.06);
+}
+.check-item:last-child{border-bottom:none;}
+.check-item input[type="checkbox"]{
+  width:18px;height:18px;flex-shrink:0;margin-top:2px;
+  accent-color:var(--sage);cursor:pointer;
+}
+.check-item label{font-size:0.92rem;color:var(--text);cursor:pointer;flex:1;line-height:1.4;}
+.check-item input[type="checkbox"]:checked + label{
+  color:var(--text-hint);text-decoration:line-through;
+}
+
+/* Stats summary */
+.stats{
+  display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;
+  padding:14px 16px;background:var(--cream);border-radius:10px;
+}
+.stat{flex:1;min-width:140px;text-align:center;}
+.stat .num{
+  font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:800;
+  color:var(--navy);line-height:1;
+}
+.stat .lbl{
+  font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--text-hint);
+  letter-spacing:0.08em;text-transform:uppercase;margin-top:5px;
+}
+
+/* ═══ VOCAB flip cards ═══ */
+.vocab-section{margin-bottom:22px;}
+.vocab-section-title{
+  font-family:'Playfair Display',serif;font-size:1.15rem;
+  color:var(--navy);margin-bottom:4px;
+}
+.vocab-section-sub{
+  font-family:'Space Mono',monospace;font-size:0.7rem;
+  color:var(--text-hint);letter-spacing:0.1em;text-transform:uppercase;
+  margin-bottom:14px;
+}
+.vocab-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+  gap:11px;
+}
+.vocab-card{perspective:1000px;height:110px;cursor:pointer;}
+.vocab-card-inner{
+  position:relative;width:100%;height:100%;
+  transition:transform 0.6s;transform-style:preserve-3d;
+}
+.vocab-card.flipped .vocab-card-inner{transform:rotateY(180deg);}
+.vocab-front,.vocab-back{
+  position:absolute;width:100%;height:100%;
+  -webkit-backface-visibility:hidden;backface-visibility:hidden;
+  display:flex;align-items:center;justify-content:center;
+  padding:14px;border-radius:11px;text-align:center;
+  box-shadow:var(--tile-shadow);
+}
+.vocab-front{
+  background:#fff;border:2px solid var(--cream-dark);
+  font-family:'Playfair Display',serif;font-weight:700;
+  color:var(--navy);font-size:0.98rem;
+}
+.vocab-back{
+  background:linear-gradient(135deg,var(--terracotta),var(--terracotta-light));
+  color:#fff;transform:rotateY(180deg);
+  font-size:0.95rem;font-weight:600;
+}
+.vocab-card.c2 .vocab-front{border-color:var(--gold-light);}
+.vocab-card.c2 .vocab-back{background:linear-gradient(135deg,var(--gold),#B88838);color:var(--navy);}
+.vocab-card.c3 .vocab-front{border-color:var(--sage-light);color:var(--sage);}
+.vocab-card.c3 .vocab-back{background:linear-gradient(135deg,var(--sage),#5A7350);}
+.vocab-card.c4 .vocab-front{border-color:var(--plum-light);color:var(--plum);}
+.vocab-card.c4 .vocab-back{background:linear-gradient(135deg,var(--plum),#5C3955);}
+.vocab-card.c5 .vocab-front{border-color:var(--navy-light);}
+.vocab-card.c5 .vocab-back{background:linear-gradient(135deg,var(--navy),var(--navy-light));}
+.vocab-hint{text-align:center;font-size:0.82rem;color:var(--text-hint);font-style:italic;margin-bottom:14px;}
+
+/* ═══ Grammar reference cards ═══ */
+.gbox{
+  background:#fff;padding:20px 22px;border-radius:12px;
+  margin-bottom:14px;box-shadow:var(--tile-shadow);
+  border-top:3px solid var(--terracotta);
+}
+.gbox.c2{border-top-color:var(--gold);}
+.gbox.c3{border-top-color:var(--sage);}
+.gbox.c4{border-top-color:var(--plum);}
+.gbox h3{
+  font-family:'Playfair Display',serif;font-size:1.12rem;
+  color:var(--navy);margin-bottom:4px;
+  display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+}
+.gbox h3 .chapter-tag{
+  font-family:'Space Mono',monospace;font-size:0.62rem;
+  background:var(--terracotta);color:#fff;
+  padding:3px 8px;border-radius:10px;letter-spacing:0.1em;
+}
+.gbox.c2 h3 .chapter-tag{background:var(--gold);color:var(--navy);}
+.gbox.c3 h3 .chapter-tag{background:var(--sage);}
+.gbox.c4 h3 .chapter-tag{background:var(--plum);}
+.gbox .sub{
+  font-size:0.85rem;color:var(--text-hint);margin-bottom:10px;font-style:italic;
+}
+
+/* Conjugation tables */
+.conj-table{
+  width:100%;border-collapse:collapse;margin:10px 0;
+  background:#fff;border-radius:8px;overflow:hidden;font-size:0.88rem;
+}
+.conj-table th,.conj-table td{
+  padding:7px 10px;text-align:left;
+  border-bottom:1px solid var(--cream-dark);
+}
+.conj-table th{
+  background:var(--navy);color:#fff;
+  font-family:'Space Mono',monospace;font-size:0.68rem;
+  letter-spacing:0.08em;text-transform:uppercase;
+}
+.conj-table td:first-child{font-weight:600;color:var(--navy);width:30%;}
+.conj-table tr:last-child td{border-bottom:none;}
+.conj-table .accent{color:var(--terracotta);font-weight:700;}
+
+/* Multi-verb table */
+.multi-verb{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:10px;margin-top:10px;
+}
+.verb-card{
+  background:var(--cream);padding:11px 13px;border-radius:8px;
+}
+.verb-card h4{
+  font-family:'Playfair Display',serif;font-size:1rem;
+  color:var(--navy);margin-bottom:7px;
+}
+.verb-card .row{
+  display:flex;justify-content:space-between;font-size:0.83rem;
+  padding:2px 0;color:var(--text);
+}
+.verb-card .row span:first-child{color:var(--text-hint);font-style:italic;}
+.verb-card .row span:last-child{font-weight:700;color:var(--terracotta);}
+
+/* OJO callout */
+.ojo{
+  background:#FFF6F0;border-left:4px solid var(--terracotta);
+  padding:12px 16px;border-radius:8px;margin:12px 0;
+}
+.ojo-title{
+  font-family:'Space Mono',monospace;font-size:0.7rem;
+  color:var(--terracotta);letter-spacing:0.12em;text-transform:uppercase;
+  font-weight:700;margin-bottom:5px;
+}
+.ojo p{font-size:0.88rem;color:var(--text);line-height:1.5;}
+.ojo em{color:var(--terracotta);font-style:italic;font-weight:600;}
+
+/* 3-column comparison for ser/estar/haber, porque/para/por */
+.three-col{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:10px;margin:12px 0;
+}
+@media(max-width:740px){.three-col{grid-template-columns:1fr;}}
+.col-card{
+  background:var(--cream);padding:14px 16px;border-radius:10px;
+  border-top:3px solid var(--navy);
+}
+.col-card.tc{border-top-color:var(--terracotta);}
+.col-card.gd{border-top-color:var(--gold);}
+.col-card.sg{border-top-color:var(--sage);}
+.col-card h4{
+  font-family:'Playfair Display',serif;font-size:1.05rem;
+  color:var(--navy);margin-bottom:4px;
+}
+.col-card .meaning{
+  font-family:'Space Mono',monospace;font-size:0.68rem;
+  color:var(--text-hint);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:8px;
+}
+.col-card .ex{
+  font-style:italic;font-size:0.83rem;color:var(--text);
+  background:#fff;padding:6px 9px;border-radius:6px;margin-bottom:5px;
+}
+
+/* Adjective agreement grid */
+.adj-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:10px;margin:10px 0;
+}
+.adj-row{
+  background:var(--cream);padding:10px 13px;border-radius:8px;
+  font-size:0.87rem;
+}
+.adj-row .type{
+  font-family:'Space Mono',monospace;font-size:0.68rem;
+  color:var(--text-hint);letter-spacing:0.1em;text-transform:uppercase;
+  margin-bottom:5px;
+}
+.adj-row .mf{display:flex;justify-content:space-between;gap:6px;}
+.adj-row .mf span{color:var(--navy);font-weight:600;}
+.adj-row .mf span.f{color:var(--terracotta);}
+
+/* ═══ Exercise items ═══ */
+.ex-item{
+  display:flex;align-items:baseline;gap:10px;padding:11px 0;
+  border-bottom:1px solid var(--cream-dark);font-size:0.97rem;
+}
+.ex-item:last-of-type{border-bottom:none;}
+.ex-num{
+  flex-shrink:0;width:28px;height:28px;border-radius:50%;
+  background:var(--cream);color:var(--navy);
+  display:inline-flex;align-items:center;justify-content:center;
+  font-family:'Space Mono',monospace;font-size:0.78rem;font-weight:700;
+}
+.ex-text{flex:1;line-height:1.7;color:var(--text);}
+.ex-hint{
+  font-family:'Space Mono',monospace;font-size:0.78rem;
+  color:var(--terracotta);margin-left:4px;
+}
+.blk{
+  display:inline-block;width:130px;padding:6px 10px;
+  border:2px solid var(--cream-dark);border-radius:6px;
+  font-family:'Source Sans 3',sans-serif;font-size:0.95rem;
+  color:var(--navy);background:#fff;outline:none;
+  transition:border-color 0.15s;
+}
+.blk.short{width:80px;}
+.blk.wide{width:200px;}
+.blk:focus{border-color:var(--gold);}
+.blk.ok{border-color:var(--sage);background:#F4F8F0;color:#3F5C32;}
+.blk.ng{border-color:var(--terracotta);background:#FFF0EA;color:#8E3A1F;}
+
+.chk-btn,.rst-btn,.toggle-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:10px 18px;border:none;border-radius:8px;
+  font-family:'Source Sans 3',sans-serif;font-size:0.92rem;
+  font-weight:700;cursor:pointer;transition:all 0.15s;min-height:42px;margin-top:14px;
+}
+.chk-btn{background:var(--navy);color:#fff;}
+.chk-btn:hover{background:var(--navy-light);}
+.rst-btn{background:#fff;color:var(--navy);border:2px solid var(--cream-dark);margin-left:6px;}
+.rst-btn:hover{border-color:var(--navy);}
+.toggle-btn{background:var(--gold);color:var(--navy);margin-left:6px;}
+.toggle-btn:hover{background:var(--gold-light);}
+.res-msg{margin-top:12px;font-size:0.93rem;font-weight:700;min-height:22px;}
+.res-msg.ok{color:#3F5C32;}
+.res-msg.ng{color:#8E3A1F;}
+
+.model-box{
+  display:none;background:var(--cream);padding:14px 18px;border-radius:10px;
+  margin-top:14px;border-left:4px solid var(--gold);
+}
+.model-box.show{display:block;animation:fadein 0.3s ease;}
+.model-box-title{
+  font-family:'Space Mono',monospace;font-size:0.72rem;
+  color:#A07A2D;letter-spacing:0.12em;text-transform:uppercase;
+  font-weight:700;margin-bottom:8px;
+}
+.model-box ol{padding-left:22px;}
+.model-box ol li{
+  font-size:0.9rem;color:var(--text);padding:5px 0;line-height:1.5;
+}
+.model-box ol li em{color:var(--terracotta);font-style:italic;font-weight:600;}
+.model-box p{font-size:0.9rem;color:var(--text);line-height:1.5;margin:6px 0;}
+
+.subhead{
+  font-family:'Space Mono',monospace;font-size:0.72rem;
+  color:var(--terracotta);letter-spacing:0.1em;text-transform:uppercase;
+  font-weight:700;margin:18px 0 8px;
+}
+
+/* ═══ Reading ═══ */
+.reading-box{
+  background:linear-gradient(135deg,#FBF7EE 0%,#F0E9D8 100%);
+  border-left:5px solid var(--terracotta);
+  padding:24px 28px;border-radius:12px;margin-bottom:18px;
+  box-shadow:var(--tile-shadow);
+}
+.reading-box .author{
+  font-family:'Space Mono',monospace;font-size:0.72rem;
+  color:var(--terracotta);letter-spacing:0.12em;text-transform:uppercase;
+  font-weight:700;margin-bottom:10px;
+}
+.reading-box .passage{
+  font-family:'Source Sans 3',sans-serif;font-size:1.0rem;
+  color:var(--text);line-height:1.75;
+}
+.reading-box .passage strong{color:var(--navy);}
+
+/* ═══ Writing textarea ═══ */
+.wl-script{
+  width:100%;min-height:340px;
+  border:2px solid var(--cream-dark);border-radius:10px;
+  padding:14px 16px;font-family:'Source Sans 3',sans-serif;
+  font-size:0.97rem;line-height:1.7;color:var(--text);
+  background:#fff;outline:none;resize:vertical;
+}
+.wl-script:focus{border-color:var(--gold);}
+.wl-controls{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:10px;flex-wrap:wrap;gap:10px;
+}
+.word-count{
+  font-family:'Space Mono',monospace;font-size:0.82rem;color:var(--text-hint);
+}
+.word-count strong{color:var(--navy);}
+.word-count.in-range strong{color:var(--sage);}
+.word-count.out-of-range strong{color:var(--terracotta);}
+.wl-btns{display:flex;gap:8px;flex-wrap:wrap;}
+.wl-btn{
+  padding:9px 16px;border:none;border-radius:8px;
+  font-family:'Source Sans 3',sans-serif;font-size:0.88rem;
+  font-weight:700;cursor:pointer;transition:all 0.15s;min-height:40px;
+}
+.wl-btn.copy{background:var(--sage);color:#fff;}
+.wl-btn.copy:hover{background:#5A7350;}
+.wl-btn.clear{background:#fff;color:var(--terracotta);border:2px solid var(--terracotta);}
+.wl-btn.clear:hover{background:#FFF0EA;}
+.save-status{
+  font-family:'Space Mono',monospace;font-size:0.74rem;
+  color:var(--sage);margin-left:8px;
+}
+
+/* Structure tracker for writing */
+.struct-list{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:8px;margin-top:10px;
+}
+.struct-item{
+  display:flex;align-items:center;gap:10px;padding:9px 12px;
+  background:#fff;border-radius:8px;border:1px solid var(--cream-dark);
+}
+.struct-item input[type="checkbox"]{
+  width:18px;height:18px;accent-color:var(--sage);cursor:pointer;flex-shrink:0;
+}
+.struct-item label{font-size:0.88rem;color:var(--text);cursor:pointer;}
+.struct-item input[type="checkbox"]:checked + label{
+  color:var(--sage);font-weight:700;
+}
+
+/* Oral prompt cards */
+.oral-card{
+  background:linear-gradient(135deg,var(--plum) 0%,#5C3955 100%);
+  color:#fff;padding:24px 28px;border-radius:14px;
+  margin-bottom:16px;box-shadow:var(--soft-shadow);
+}
+.oral-card .label{
+  font-family:'Space Mono',monospace;font-size:0.7rem;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:rgba(255,255,255,0.7);margin-bottom:6px;
+}
+.oral-card h3{
+  font-family:'Playfair Display',serif;font-size:1.3rem;
+  margin-bottom:10px;color:#fff;
+}
+.oral-card p{font-size:0.95rem;line-height:1.65;color:rgba(255,255,255,0.95);}
+
+/* Resource cards */
+.res-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:14px;
+}
+.res-card{
+  background:#fff;padding:16px 18px;border-radius:12px;
+  border-top:3px solid var(--gold);box-shadow:var(--tile-shadow);
+}
+.res-card-day{
+  font-family:'Space Mono',monospace;font-size:0.7rem;
+  color:var(--terracotta);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:5px;
+}
+.res-card-topic{
+  font-family:'Playfair Display',serif;font-weight:700;color:var(--navy);
+  font-size:1.02rem;margin-bottom:10px;
+}
+.res-card a{
+  display:block;font-size:0.84rem;color:var(--navy-light);
+  text-decoration:none;padding:6px 0;border-bottom:1px solid var(--cream-dark);
+  word-break:break-all;
+}
+.res-card a:last-child{border-bottom:none;}
+.res-card a:hover{color:var(--terracotta);}
+.res-card a::before{content:'→ ';color:var(--gold);font-weight:700;}
+
+/* Footer */
+.footer{
+  margin-top:36px;padding:20px;text-align:center;
+  font-family:'Space Mono',monospace;font-size:0.76rem;
+  color:var(--text-hint);letter-spacing:0.05em;
+}
+
+/* Final celebration card */
+.celebrate{
+  background:linear-gradient(135deg,var(--gold) 0%,#B88838 100%);
+  color:var(--navy);padding:26px 30px;border-radius:14px;
+  margin-bottom:18px;box-shadow:var(--soft-shadow);text-align:center;
+}
+.celebrate h3{
+  font-family:'Playfair Display',serif;font-size:1.6rem;
+  margin-bottom:8px;color:var(--navy);
+}
+.celebrate p{font-size:0.98rem;color:var(--navy);line-height:1.6;}
+
+@media(max-width:600px){
+  .chap-head{padding:24px 22px;}
+  .header-title{font-size:1.7rem;}
+  .card,.gbox,.reading-box,.oral-card{padding:18px 20px;}
+  .three-col{grid-template-columns:1fr;}
+  .ex-item{flex-wrap:wrap;}
+}
+</style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <div class="chap-head">
+    <span class="header-badge">SPSCC · ESP 121 · REPASO FINAL</span>
+    <span class="header-title">Examen Final — Capítulos 1–4</span>
+    <span class="header-subtitle">Semana 10 · Comprehensive Review · ¡Tú puedes!</span>
+  </div>
+
+  <div class="prog-bar"><div class="prog-fill" id="pf" style="width:0%"></div></div>
+
+  <nav class="nav" aria-label="Review sections">
+    <button class="tab active" onclick="switchTab('ov',this)"><span class="pno">0</span>Inicio</button>
+    <button class="tab" onclick="switchTab('vo',this)"><span class="pno">1</span>Vocabulario</button>
+    <button class="tab" onclick="switchTab('gr',this)"><span class="pno">2</span>Gramática</button>
+    <button class="tab" onclick="switchTab('le',this)"><span class="pno">3</span>Lectura</button>
+    <button class="tab" onclick="switchTab('es',this)"><span class="pno">4</span>Escritura</button>
+  </nav>
+
+  <div id="main-content"></div>
+
+  <!-- ═══ INICIO ═══ -->
+  <section class="sec active" id="sec-ov">
+    <h2 class="sec-title">Bienvenido al Repaso Final</h2>
+    <p class="sec-sub">All 4 chapters · 4-part exam · Wednesday · ¡Vamos!</p>
+
+    <div class="week-hero">
+      <h1>You've reached Semana 10. Time to bring it all together.</h1>
+      <p>The Final Exam covers <strong>everything from Chapters 1–4</strong>: verb conjugation across all forms you've learned, adjective agreement, the three "being" verbs (ser/estar/haber), comparatives, question words, gustar, and the vocabulary from every chapter. Use this page to review systematically — tab by tab — and to practice with the same exercises that mirror the exam.</p>
+      <div class="topic-chips">
+        <span class="chip">ser · estar · haber</span>
+        <span class="chip">-ar / -er / -ir verbs</span>
+        <span class="chip">ir · tener · hacer</span>
+        <span class="chip">irregular yo</span>
+        <span class="chip">e→ie</span>
+        <span class="chip">gustar</span>
+        <span class="chip">saber vs. conocer</span>
+        <span class="chip">comparativos</span>
+        <span class="chip">pronombres relativos</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Formato del Examen <span class="pill">100 PTS · 70 MIN</span></div>
+      <div class="exam-grid">
+        <div class="exam-card p1">
+          <div class="part-num">PARTE 1</div>
+          <h3>Vocabulario</h3>
+          <div class="time">15 minutes · <span class="pts">20 pts</span></div>
+          <p>Fill-in + matching from all 4 chapters. Study with the <strong>Vocabulario</strong> tab — flip cards organized by chapter.</p>
+        </div>
+        <div class="exam-card p2">
+          <div class="part-num">PARTE 2</div>
+          <h3>Gramática</h3>
+          <div class="time">25 minutes · <span class="pts">30 pts</span></div>
+          <p>Conjugation tables + sentence completion (all verb types). Practice with <strong>Ejercicio 1</strong> and <strong>Ejercicio 2</strong>.</p>
+        </div>
+        <div class="exam-card p3">
+          <div class="part-num">PARTE 3</div>
+          <h3>Lectura</h3>
+          <div class="time">10 minutes · <span class="pts">20 pts</span></div>
+          <p>Authentic-style paragraph + comprehension questions. Practice with the Isabel passage in the <strong>Lectura</strong> tab.</p>
+        </div>
+        <div class="exam-card p4">
+          <div class="part-num">PARTE 4</div>
+          <h3>Escritura</h3>
+          <div class="time">20 minutes · <span class="pts">30 pts</span></div>
+          <p>Integrated paragraph (120–150 words) using structures from all 4 chapters. Draft in the <strong>Escritura</strong> tab.</p>
+        </div>
+      </div>
+      <p style="margin-top:16px;font-size:0.88rem;color:var(--text-hint);font-style:italic;">+ <strong>Individual Oral Assessment</strong> (separate): 2-min introduction + 2-min place description + Q&amp;A. Prompts in the Escritura tab.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Plan de la Semana <span class="pill">SCHEDULE</span></div>
+      <div class="schedule">
+        <div class="sched-row head">
+          <div class="sched-cell">Day</div>
+          <div class="sched-cell">Type</div>
+          <div class="sched-cell">Focus</div>
+          <div class="sched-cell">Action</div>
+        </div>
+        <div class="sched-row">
+          <div class="sched-cell day">Weekend</div>
+          <div class="sched-cell">Self-Guided</div>
+          <div class="sched-cell"><strong>Ch. 1–2 Independent Review</strong> · Vocabulario tab + Ejercicio 1</div>
+          <div class="sched-cell">Note your 3 weakest structures · do Ejercicio 1</div>
+        </div>
+        <div class="sched-row">
+          <div class="sched-cell day">Monday</div>
+          <div class="sched-cell">In-Class</div>
+          <div class="sched-cell"><strong>Ch. 3–4 Review Games</strong> · Oral practice pairs · Reading comprehension</div>
+          <div class="sched-cell">Complete Ejercicio 3 (Lectura) · draft writing paragraph</div>
+        </div>
+        <div class="sched-row">
+          <div class="sched-cell day">Tuesday</div>
+          <div class="sched-cell">Practice</div>
+          <div class="sched-cell"><strong>Mock Final + Oral Prep</strong> · timed practice · error log</div>
+          <div class="sched-cell">Focus on weak areas · prepare oral prompts</div>
+        </div>
+        <div class="sched-row">
+          <div class="sched-cell day">Wednesday</div>
+          <div class="sched-cell">In-Class</div>
+          <div class="sched-cell"><strong>FINAL EXAM</strong> (55 min) + Oral Assessment</div>
+          <div class="sched-cell">¡Felicitaciones! 🎉</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Lista de Repaso · Topic Checklist <span class="pill">SELF-TRACK</span></div>
+      <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:14px;">Tick each item as you review it. Your progress saves automatically. Aim for ≥ 80% before the exam.</p>
+
+      <div class="checklist-wrap">
+        <div class="checklist-group ch1">
+          <h4>Capítulo 1 <span class="ch-pill">PALABRAS</span></h4>
+          <div class="check-item"><input type="checkbox" id="ck1_1"><label for="ck1_1">Subject pronouns (yo, tú, él, ella, nosotros, ellos, Uds.)</label></div>
+          <div class="check-item"><input type="checkbox" id="ck1_2"><label for="ck1_2"><strong>SER</strong> conjugation (soy, eres, es, somos, son)</label></div>
+          <div class="check-item"><input type="checkbox" id="ck1_3"><label for="ck1_3"><strong>Llamarse</strong> (me llamo, te llamas, se llama…)</label></div>
+          <div class="check-item"><input type="checkbox" id="ck1_4"><label for="ck1_4">Regular -AR / -ER / -IR verbs in present tense</label></div>
+          <div class="check-item"><input type="checkbox" id="ck1_5"><label for="ck1_5">Articles (el/la/los/las + un/una/unos/unas)</label></div>
+          <div class="check-item"><input type="checkbox" id="ck1_6"><label for="ck1_6">Classroom phrases (¿Cómo se dice?, No entiendo…)</label></div>
+        </div>
+
+        <div class="checklist-group ch2">
+          <h4>Capítulo 2 <span class="ch-pill">IDENTIDADES</span></h4>
+          <div class="check-item"><input type="checkbox" id="ck2_1"><label for="ck2_1"><strong>IR / TENER / HACER</strong> conjugation</label></div>
+          <div class="check-item"><input type="checkbox" id="ck2_2"><label for="ck2_2">Nationalities + gender agreement</label></div>
+          <div class="check-item"><input type="checkbox" id="ck2_3"><label for="ck2_3">Professions (-o/-a · -e · consonant endings)</label></div>
+          <div class="check-item"><input type="checkbox" id="ck2_4"><label for="ck2_4">Adjective agreement (gender + number)</label></div>
+          <div class="check-item"><input type="checkbox" id="ck2_5"><label for="ck2_5"><strong>GUSTAR</strong> (me/te/le gusta + gustan)</label></div>
+          <div class="check-item"><input type="checkbox" id="ck2_6"><label for="ck2_6">Demonstratives (este / ese / aquel)</label></div>
+          <div class="check-item"><input type="checkbox" id="ck2_7"><label for="ck2_7">Numbers 1–50 in words</label></div>
+        </div>
+
+        <div class="checklist-group ch3">
+          <h4>Capítulo 3 <span class="ch-pill">MI VIDA</span></h4>
+          <div class="check-item"><input type="checkbox" id="ck3_1"><label for="ck3_1">Family vocabulary (padre, madre, hermano, abuelos…)</label></div>
+          <div class="check-item"><input type="checkbox" id="ck3_2"><label for="ck3_2">Possessive adjectives (mi/tu/su/nuestro)</label></div>
+          <div class="check-item"><input type="checkbox" id="ck3_3"><label for="ck3_3"><strong>SABER vs. CONOCER</strong></label></div>
+          <div class="check-item"><input type="checkbox" id="ck3_4"><label for="ck3_4">E→IE verbs (querer, entender, preferir, pensar, venir)</label></div>
+          <div class="check-item"><input type="checkbox" id="ck3_5"><label for="ck3_5">Irregular YO (hago, sé, conozco, pongo, salgo, traigo, digo, vengo)</label></div>
+          <div class="check-item"><input type="checkbox" id="ck3_6"><label for="ck3_6"><strong>Porque · Para · Por</strong> distinction</label></div>
+          <div class="check-item"><input type="checkbox" id="ck3_7"><label for="ck3_7">Leisure activities + languages</label></div>
+        </div>
+
+        <div class="checklist-group ch4">
+          <h4>Capítulo 4 <span class="ch-pill">LUGARES</span></h4>
+          <div class="check-item"><input type="checkbox" id="ck4_1"><label for="ck4_1">Campus + room vocabulary + descriptive adjectives</label></div>
+          <div class="check-item"><input type="checkbox" id="ck4_2"><label for="ck4_2"><strong>SER vs. ESTAR vs. HABER (hay)</strong> + ESCAPA</label></div>
+          <div class="check-item"><input type="checkbox" id="ck4_3"><label for="ck4_3">Question words (¿qué? ¿dónde? ¿cómo? ¿cuál? ¿cuántos?)</label></div>
+          <div class="check-item"><input type="checkbox" id="ck4_4"><label for="ck4_4">Comparatives (más/menos + adj + que · tan + adj + como)</label></div>
+          <div class="check-item"><input type="checkbox" id="ck4_5"><label for="ck4_5">Superlatives (el/la más/menos + adj + de) + irregulars (mejor/peor)</label></div>
+          <div class="check-item"><input type="checkbox" id="ck4_6"><label for="ck4_6">Relative pronouns (<strong>que</strong> for people/things · <strong>donde</strong> for places)</label></div>
+          <div class="check-item"><input type="checkbox" id="ck4_7"><label for="ck4_7">Objective vs. subjective description (creo que / me parece que…)</label></div>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><div class="num" id="stat-total">0</div><div class="lbl">Topics reviewed</div></div>
+        <div class="stat"><div class="num" id="stat-pct">0%</div><div class="lbl">Of 27 items</div></div>
+        <div class="stat"><div class="num" id="stat-remain">27</div><div class="lbl">Still to review</div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Recursos en Línea <span class="pill">COMPREHENSIVE</span></div>
+      <div class="res-grid">
+        <div class="res-card">
+          <div class="res-card-day">Mixed Verb Review</div>
+          <div class="res-card-topic">All verb types, conjugated</div>
+          <a href="https://conjuguemos.com/verb/2035489" target="_blank" rel="noopener">Practice: Mixed Verb Drills (Conjuguemos)</a>
+          <a href="https://www.youtube.com/@SenorJordanSpanish/search?query=verb+conjugation+review" target="_blank" rel="noopener">Video: Verb Conjugation Review (Señor Jordan)</a>
+        </div>
+        <div class="res-card">
+          <div class="res-card-day">Grammar Reference</div>
+          <div class="res-card-topic">Complete reference hub</div>
+          <a href="https://www.spanishdict.com/guide" target="_blank" rel="noopener">Practice: SpanishDict Grammar Reference</a>
+          <a href="https://www.youtube.com/@spanishpod101/search?query=Spanish+1+complete+review" target="_blank" rel="noopener">Video: Spanish 1 Complete Review</a>
+        </div>
+        <div class="res-card">
+          <div class="res-card-day">Oral Exam Prep</div>
+          <div class="res-card-topic">Pronunciation + delivery</div>
+          <a href="https://www.youtube.com/@ButterflySpanish/search?query=oral+exam+tips+Spanish" target="_blank" rel="noopener">Video: Spanish Oral Exam Tips</a>
+          <a href="https://www.spanishdict.com/guide/spanish-alphabet-pronunciation" target="_blank" rel="noopener">Practice: Pronunciation Guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ VOCABULARIO ═══ -->
+  <section class="sec" id="sec-vo">
+    <h2 class="sec-title">Parte 1 · Vocabulario</h2>
+    <p class="sec-sub">Flip cards from all 4 chapters · tap to flip</p>
+
+    <p class="vocab-hint">Test yourself before flipping. Each chapter has its own color band — terracotta · gold · sage · plum.</p>
+
+    <!-- Ch. 1 -->
+    <div class="card">
+      <div class="card-title">Capítulo 1 · En la clase de español <span class="pill">CH.1 · PALABRAS</span></div>
+      <div class="vocab-grid">
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">¿Cómo se dice…?</div><div class="vocab-back">How do you say…?</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">¿Cómo se escribe…?</div><div class="vocab-back">How do you spell…?</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">No entiendo</div><div class="vocab-back">I don't understand</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">Más despacio, por favor</div><div class="vocab-back">More slowly, please</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">¿Qué significa…?</div><div class="vocab-back">What does … mean?</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">Tengo una pregunta</div><div class="vocab-back">I have a question</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">Perdón / Disculpe</div><div class="vocab-back">Excuse me / I'm sorry</div></div></div>
+        <div class="vocab-card" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">De nada</div><div class="vocab-back">You're welcome</div></div></div>
+      </div>
+    </div>
+
+    <!-- Ch. 2 — Nationalities / Personality -->
+    <div class="card">
+      <div class="card-title">Capítulo 2 · Nacionalidades, profesiones, personalidad <span class="pill">CH.2 · IDENTIDADES</span></div>
+      <div class="vocab-grid">
+        <div class="vocab-card c2" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">mexicano/a</div><div class="vocab-back">Mexican</div></div></div>
+        <div class="vocab-card c2" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">colombiano/a</div><div class="vocab-back">Colombian</div></div></div>
+        <div class="vocab-card c2" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">estadounidense</div><div class="vocab-back">American (US)</div></div></div>
+        <div class="vocab-card c2" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">el / la cantante</div><div class="vocab-back">singer</div></div></div>
+        <div class="vocab-card c2" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">el actor / la actriz</div><div class="vocab-back">actor / actress</div></div></div>
+        <div class="vocab-card c2" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">el director / la directora</div><div class="vocab-back">director</div></div></div>
+        <div class="vocab-card c2" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">simpático/a</div><div class="vocab-back">nice, friendly</div></div></div>
+        <div class="vocab-card c2" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">trabajador/a</div><div class="vocab-back">hard-working</div></div></div>
+        <div class="vocab-card c2" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">inteligente</div><div class="vocab-back">intelligent</div></div></div>
+        <div class="vocab-card c2" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">creativo/a</div><div class="vocab-back">creative</div></div></div>
+        <div class="vocab-card c2" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">tímido/a</div><div class="vocab-back">shy</div></div></div>
+        <div class="vocab-card c2" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">talentoso/a</div><div class="vocab-back">talented</div></div></div>
+      </div>
+    </div>
+
+    <!-- Ch. 3 — Family & Leisure -->
+    <div class="card">
+      <div class="card-title">Capítulo 3 · La familia, ocio y lenguas <span class="pill">CH.3 · MI VIDA</span></div>
+      <div class="vocab-grid">
+        <div class="vocab-card c3" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">los padres</div><div class="vocab-back">parents</div></div></div>
+        <div class="vocab-card c3" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">el hermano / la hermana</div><div class="vocab-back">brother / sister</div></div></div>
+        <div class="vocab-card c3" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">los abuelos</div><div class="vocab-back">grandparents</div></div></div>
+        <div class="vocab-card c3" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">el tío / la tía</div><div class="vocab-back">uncle / aunt</div></div></div>
+        <div class="vocab-card c3" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">el primo / la prima</div><div class="vocab-back">cousin</div></div></div>
+        <div class="vocab-card c3" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">escuchar música</div><div class="vocab-back">to listen to music</div></div></div>
+        <div class="vocab-card c3" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">ver películas</div><div class="vocab-back">to watch movies</div></div></div>
+        <div class="vocab-card c3" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">hacer deporte</div><div class="vocab-back">to play sports</div></div></div>
+        <div class="vocab-card c3" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">cocinar</div><div class="vocab-back">to cook</div></div></div>
+        <div class="vocab-card c3" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">salir con amigos</div><div class="vocab-back">to go out with friends</div></div></div>
+      </div>
+    </div>
+
+    <!-- Ch. 4 — Places -->
+    <div class="card">
+      <div class="card-title">Capítulo 4 · Lugares y descripciones <span class="pill">CH.4 · LUGARES</span></div>
+      <div class="vocab-grid">
+        <div class="vocab-card c4" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">la biblioteca</div><div class="vocab-back">library</div></div></div>
+        <div class="vocab-card c4" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">la cafetería</div><div class="vocab-back">cafeteria</div></div></div>
+        <div class="vocab-card c4" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">el gimnasio</div><div class="vocab-back">gym</div></div></div>
+        <div class="vocab-card c4" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">el edificio</div><div class="vocab-back">building</div></div></div>
+        <div class="vocab-card c4" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">la habitación</div><div class="vocab-back">bedroom</div></div></div>
+        <div class="vocab-card c4" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">la cocina</div><div class="vocab-back">kitchen</div></div></div>
+        <div class="vocab-card c4" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">moderno/a ↔ antiguo/a</div><div class="vocab-back">modern ↔ old</div></div></div>
+        <div class="vocab-card c4" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">ruidoso/a ↔ tranquilo/a</div><div class="vocab-back">noisy ↔ quiet</div></div></div>
+        <div class="vocab-card c4" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">amplio/a ↔ pequeño/a</div><div class="vocab-back">spacious ↔ small</div></div></div>
+        <div class="vocab-card c4" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">limpio/a ↔ sucio/a</div><div class="vocab-back">clean ↔ dirty</div></div></div>
+      </div>
+    </div>
+
+    <!-- Connectors & Numbers -->
+    <div class="card">
+      <div class="card-title">Conectores y números clave <span class="pill">TODOS LOS CAPÍTULOS</span></div>
+      <div class="vocab-grid">
+        <div class="vocab-card c5" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">y / pero</div><div class="vocab-back">and / but</div></div></div>
+        <div class="vocab-card c5" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">también / tampoco</div><div class="vocab-back">also / neither</div></div></div>
+        <div class="vocab-card c5" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">por eso</div><div class="vocab-back">therefore / that's why</div></div></div>
+        <div class="vocab-card c5" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">además</div><div class="vocab-back">moreover / in addition</div></div></div>
+        <div class="vocab-card c5" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">veinte · treinta · cuarenta</div><div class="vocab-back">20 · 30 · 40</div></div></div>
+        <div class="vocab-card c5" onclick="this.classList.toggle('flipped')"><div class="vocab-card-inner"><div class="vocab-front">cincuenta · cien</div><div class="vocab-back">50 · 100</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ GRAMÁTICA ═══ -->
+  <section class="sec" id="sec-gr">
+    <h2 class="sec-title">Parte 2 · Gramática</h2>
+    <p class="sec-sub">Reference + exercises 1–2</p>
+
+    <p style="font-size:0.95rem;color:var(--text-light);margin-bottom:20px;">This is the largest section of the exam (30 pts). Scroll through the reference cards first, then practice with <strong>Ejercicio 1</strong> (mixed verb conjugation) and <strong>Ejercicio 2</strong> (transformations).</p>
+
+    <!-- VERB REFERENCE -->
+    <h3 class="subhead">Reference · Verb Conjugations</h3>
+
+    <!-- SER -->
+    <div class="gbox">
+      <h3>SER · to be (identity, origin) <span class="chapter-tag">CH.1</span></h3>
+      <p class="sub">For permanent traits, identity, origin, profession, time/dates.</p>
+      <table class="conj-table">
+        <tbody>
+          <tr><td>yo</td><td class="accent">soy</td><td>nosotros</td><td class="accent">somos</td></tr>
+          <tr><td>tú</td><td class="accent">eres</td><td>ellos / Uds.</td><td class="accent">son</td></tr>
+          <tr><td>él / ella / Ud.</td><td class="accent">es</td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Regular verbs -->
+    <div class="gbox">
+      <h3>Regular Verbs · -AR / -ER / -IR <span class="chapter-tag">CH.1</span></h3>
+      <p class="sub">Drop the ending, add the right one for the subject.</p>
+      <div class="multi-verb">
+        <div class="verb-card">
+          <h4>HABLAR (-ar)</h4>
+          <div class="row"><span>yo</span><span>hablo</span></div>
+          <div class="row"><span>tú</span><span>hablas</span></div>
+          <div class="row"><span>él/ella</span><span>habla</span></div>
+          <div class="row"><span>nosotros</span><span>hablamos</span></div>
+          <div class="row"><span>ellos/Uds.</span><span>hablan</span></div>
+        </div>
+        <div class="verb-card">
+          <h4>COMER (-er)</h4>
+          <div class="row"><span>yo</span><span>como</span></div>
+          <div class="row"><span>tú</span><span>comes</span></div>
+          <div class="row"><span>él/ella</span><span>come</span></div>
+          <div class="row"><span>nosotros</span><span>comemos</span></div>
+          <div class="row"><span>ellos/Uds.</span><span>comen</span></div>
+        </div>
+        <div class="verb-card">
+          <h4>VIVIR (-ir)</h4>
+          <div class="row"><span>yo</span><span>vivo</span></div>
+          <div class="row"><span>tú</span><span>vives</span></div>
+          <div class="row"><span>él/ella</span><span>vive</span></div>
+          <div class="row"><span>nosotros</span><span>vivimos</span></div>
+          <div class="row"><span>ellos/Uds.</span><span>viven</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IR / TENER / HACER -->
+    <div class="gbox c2">
+      <h3>IR · TENER · HACER <span class="chapter-tag">CH.2</span></h3>
+      <p class="sub">High-frequency irregulars — memorize all three.</p>
+      <div class="multi-verb">
+        <div class="verb-card">
+          <h4>IR (to go)</h4>
+          <div class="row"><span>yo</span><span>voy</span></div>
+          <div class="row"><span>tú</span><span>vas</span></div>
+          <div class="row"><span>él/ella</span><span>va</span></div>
+          <div class="row"><span>nosotros</span><span>vamos</span></div>
+          <div class="row"><span>ellos/Uds.</span><span>van</span></div>
+        </div>
+        <div class="verb-card">
+          <h4>TENER (to have)</h4>
+          <div class="row"><span>yo</span><span>tengo</span></div>
+          <div class="row"><span>tú</span><span>tienes</span></div>
+          <div class="row"><span>él/ella</span><span>tiene</span></div>
+          <div class="row"><span>nosotros</span><span>tenemos</span></div>
+          <div class="row"><span>ellos/Uds.</span><span>tienen</span></div>
+        </div>
+        <div class="verb-card">
+          <h4>HACER (to do/make)</h4>
+          <div class="row"><span>yo</span><span>hago</span></div>
+          <div class="row"><span>tú</span><span>haces</span></div>
+          <div class="row"><span>él/ella</span><span>hace</span></div>
+          <div class="row"><span>nosotros</span><span>hacemos</span></div>
+          <div class="row"><span>ellos/Uds.</span><span>hacen</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- E→IE Stem changers -->
+    <div class="gbox c3">
+      <h3>Stem-Changing Verbs · E → IE <span class="chapter-tag">CH.3</span></h3>
+      <p class="sub">The "boot" pattern — changes in all forms EXCEPT nosotros.</p>
+      <div class="multi-verb">
+        <div class="verb-card">
+          <h4>QUERER (to want)</h4>
+          <div class="row"><span>yo</span><span>quiero</span></div>
+          <div class="row"><span>tú</span><span>quieres</span></div>
+          <div class="row"><span>él/ella</span><span>quiere</span></div>
+          <div class="row" style="color:var(--sage);"><span>nosotros ✓</span><span style="color:var(--sage);">queremos</span></div>
+          <div class="row"><span>ellos/Uds.</span><span>quieren</span></div>
+        </div>
+        <div class="verb-card">
+          <h4>ENTENDER</h4>
+          <div class="row"><span>yo</span><span>entiendo</span></div>
+          <div class="row"><span>tú</span><span>entiendes</span></div>
+          <div class="row"><span>él/ella</span><span>entiende</span></div>
+          <div class="row" style="color:var(--sage);"><span>nosotros ✓</span><span style="color:var(--sage);">entendemos</span></div>
+          <div class="row"><span>ellos/Uds.</span><span>entienden</span></div>
+        </div>
+        <div class="verb-card">
+          <h4>Also: PREFERIR</h4>
+          <div class="row"><span>yo</span><span>prefiero</span></div>
+          <div class="row"><span>tú</span><span>prefieres</span></div>
+          <div class="row"><span>nosotros ✓</span><span style="color:var(--sage);">preferimos</span></div>
+          <div class="row"><span>ellos</span><span>prefieren</span></div>
+        </div>
+      </div>
+      <p style="font-size:0.86rem;color:var(--text-hint);margin-top:8px;">Other e→ie verbs: <em>empezar, pensar, cerrar, venir, sentir.</em></p>
+    </div>
+
+    <!-- Irregular YO + Saber/Conocer -->
+    <div class="gbox c3">
+      <h3>Irregular YO Forms + Saber vs. Conocer <span class="chapter-tag">CH.3</span></h3>
+      <p class="sub">Only the yo form is irregular — other persons conjugate normally.</p>
+      <table class="conj-table">
+        <thead><tr><th>Infinitive</th><th>Yo form</th><th>Infinitive</th><th>Yo form</th></tr></thead>
+        <tbody>
+          <tr><td>hacer</td><td class="accent">hago</td><td>salir</td><td class="accent">salgo</td></tr>
+          <tr><td>saber</td><td class="accent">sé</td><td>traer</td><td class="accent">traigo</td></tr>
+          <tr><td>conocer</td><td class="accent">conozco</td><td>decir</td><td class="accent">digo</td></tr>
+          <tr><td>poner</td><td class="accent">pongo</td><td>venir</td><td class="accent">vengo</td></tr>
+        </tbody>
+      </table>
+      <div class="ojo">
+        <div class="ojo-title">Saber vs. Conocer</div>
+        <p><strong>SABER</strong> = facts / how to do something (<em>Yo sé bailar. Sé que mañana hay clase.</em>) · <strong>CONOCER</strong> = to be familiar with a person/place (<em>Conozco a María. ¿Conoces Buenos Aires?</em> — use personal "a" with people!)</p>
+      </div>
+    </div>
+
+    <!-- ESTAR + ser/estar/hay -->
+    <div class="gbox c4">
+      <h3>SER · ESTAR · HABER (hay) <span class="chapter-tag">CH.4</span></h3>
+      <p class="sub">Three "being" verbs — NOT interchangeable.</p>
+      <table class="conj-table">
+        <thead><tr><th></th><th>ser</th><th>estar</th></tr></thead>
+        <tbody>
+          <tr><td>yo</td><td class="accent">soy</td><td class="accent">estoy</td></tr>
+          <tr><td>tú</td><td class="accent">eres</td><td class="accent">estás</td></tr>
+          <tr><td>él/ella/Ud.</td><td class="accent">es</td><td class="accent">está</td></tr>
+          <tr><td>nosotros</td><td class="accent">somos</td><td class="accent">estamos</td></tr>
+          <tr><td>ellos/Uds.</td><td class="accent">son</td><td class="accent">están</td></tr>
+        </tbody>
+      </table>
+      <div class="three-col">
+        <div class="col-card tc">
+          <h4>SER</h4>
+          <div class="meaning">identity · permanent</div>
+          <div class="ex">Soy estudiante.</div>
+          <div class="ex">Es de México.</div>
+        </div>
+        <div class="col-card gd">
+          <h4>ESTAR</h4>
+          <div class="meaning">location · state (ESCAPA)</div>
+          <div class="ex">Está en la biblioteca.</div>
+          <div class="ex">Estoy nervioso.</div>
+        </div>
+        <div class="col-card sg">
+          <h4>HAY</h4>
+          <div class="meaning">existence · invariable</div>
+          <div class="ex">Hay una cafetería.</div>
+          <div class="ex">Hay diez edificios.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GUSTAR -->
+    <div class="gbox c2">
+      <h3>GUSTAR · likes &amp; dislikes <span class="chapter-tag">CH.2</span></h3>
+      <p class="sub">"It pleases me" structure — the thing liked is the subject.</p>
+      <table class="conj-table">
+        <tbody>
+          <tr><td>me gusta + sg. noun / infinitive</td><td><em>Me gusta el café. Me gusta bailar.</em></td></tr>
+          <tr><td>me gustan + pl. noun</td><td><em>Me gustan las películas.</em></td></tr>
+          <tr><td>te gusta(n) / le gusta(n)</td><td><em>¿Te gusta el jazz? A ella le gustan los perros.</em></td></tr>
+          <tr><td>nos / les gusta(n)</td><td><em>Nos gusta cocinar. A ellos les gustan los deportes.</em></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Articles + Adjective Agreement -->
+    <div class="gbox">
+      <h3>Articles + Adjective Agreement <span class="chapter-tag">CH.1–2</span></h3>
+      <table class="conj-table">
+        <thead><tr><th></th><th>Definite</th><th>Indefinite</th></tr></thead>
+        <tbody>
+          <tr><td>m. sg.</td><td class="accent">el</td><td class="accent">un</td></tr>
+          <tr><td>f. sg.</td><td class="accent">la</td><td class="accent">una</td></tr>
+          <tr><td>m. pl.</td><td class="accent">los</td><td class="accent">unos</td></tr>
+          <tr><td>f. pl.</td><td class="accent">las</td><td class="accent">unas</td></tr>
+        </tbody>
+      </table>
+      <div class="adj-grid">
+        <div class="adj-row">
+          <div class="type">Ends in -o / -a</div>
+          <div class="mf"><span>simpático</span><span class="f">simpática</span></div>
+        </div>
+        <div class="adj-row">
+          <div class="type">Ends in -e (invariable for gender)</div>
+          <div class="mf"><span>inteligente</span><span class="f">inteligente</span></div>
+        </div>
+        <div class="adj-row">
+          <div class="type">Ends in consonant (add -a for f.)</div>
+          <div class="mf"><span>trabajador</span><span class="f">trabajadora</span></div>
+        </div>
+        <div class="adj-row">
+          <div class="type">Plural: add -s (vowel) or -es (consonant)</div>
+          <div class="mf"><span>simpáticos</span><span class="f">trabajadoras</span></div>
+        </div>
+      </div>
+      <div class="ojo">
+        <div class="ojo-title">Watch out · Gender Traps</div>
+        <p><em>el día, el problema, el mapa, el examen</em> = masculine (despite ending in -a or -en) · <em>la mano, la habitación, la decisión</em> = feminine. Words ending in <strong>-ción / -sión / -dad / -tad</strong> = always feminine.</p>
+      </div>
+    </div>
+
+    <!-- Demonstratives + Possessives -->
+    <div class="gbox c2">
+      <h3>Demonstratives + Possessives <span class="chapter-tag">CH.2–3</span></h3>
+      <table class="conj-table">
+        <thead><tr><th></th><th>Near (this)</th><th>Mid (that)</th><th>Far (over there)</th></tr></thead>
+        <tbody>
+          <tr><td>m. sg.</td><td>este</td><td>ese</td><td>aquel</td></tr>
+          <tr><td>f. sg.</td><td>esta</td><td>esa</td><td>aquella</td></tr>
+          <tr><td>m. pl.</td><td>estos</td><td>esos</td><td>aquellos</td></tr>
+          <tr><td>f. pl.</td><td>estas</td><td>esas</td><td>aquellas</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.88rem;color:var(--text-light);margin:10px 0 6px;"><strong>Possessives:</strong></p>
+      <table class="conj-table">
+        <tbody>
+          <tr><td>mi / mis</td><td>my</td><td>tu / tus</td><td>your (informal)</td></tr>
+          <tr><td>su / sus</td><td>his/her/your formal/their</td><td>nuestro/a/os/as</td><td>our</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Porque/Para/Por + Question words -->
+    <div class="gbox c3">
+      <h3>Porque · Para · Por <span class="chapter-tag">CH.3</span></h3>
+      <div class="three-col">
+        <div class="col-card tc">
+          <h4>PORQUE</h4>
+          <div class="meaning">= because (reason)</div>
+          <div class="ex">Estudio <strong>porque</strong> me gusta.</div>
+        </div>
+        <div class="col-card gd">
+          <h4>PARA</h4>
+          <div class="meaning">= in order to (purpose)</div>
+          <div class="ex">Estudio <strong>para</strong> aprender.</div>
+        </div>
+        <div class="col-card sg">
+          <h4>POR</h4>
+          <div class="meaning">= because of · for · by</div>
+          <div class="ex">Gracias <strong>por</strong> todo.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Question Words -->
+    <div class="gbox c4">
+      <h3>Palabras Interrogativas <span class="chapter-tag">CH.4</span></h3>
+      <table class="conj-table">
+        <tbody>
+          <tr><td><span class="accent">¿qué?</span></td><td>what (definitions, objects)</td><td><span class="accent">¿cómo?</span></td><td>how / what is X like</td></tr>
+          <tr><td><span class="accent">¿quién/es?</span></td><td>who</td><td><span class="accent">¿cuánto/a?</span></td><td>how much (uncountable)</td></tr>
+          <tr><td><span class="accent">¿dónde?</span></td><td>where</td><td><span class="accent">¿cuántos/as?</span></td><td>how many (countable)</td></tr>
+          <tr><td><span class="accent">¿cuándo?</span></td><td>when</td><td><span class="accent">¿por qué?</span></td><td>why (two words!)</td></tr>
+          <tr><td><span class="accent">¿cuál/es?</span></td><td>which (choice from set)</td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Comparatives & Superlatives + Relative Pronouns -->
+    <div class="gbox c4">
+      <h3>Comparativos · Superlativos · Pronombres Relativos <span class="chapter-tag">CH.4</span></h3>
+      <div class="three-col">
+        <div class="col-card tc">
+          <h4>Comparativo</h4>
+          <div class="meaning">más / menos than</div>
+          <div class="ex">más + adj + que</div>
+          <div class="ex">menos + adj + que</div>
+          <div class="ex">tan + adj + como (equality)</div>
+        </div>
+        <div class="col-card gd">
+          <h4>Superlativo</h4>
+          <div class="meaning">most / least</div>
+          <div class="ex">el/la más + adj + de</div>
+          <div class="ex"><strong>Irregulars:</strong> bueno → mejor · malo → peor</div>
+          <div class="ex">mayor (older) · menor (younger)</div>
+        </div>
+        <div class="col-card sg">
+          <h4>Pronombres relativos</h4>
+          <div class="meaning">linking ideas</div>
+          <div class="ex"><strong>que</strong> = people / things</div>
+          <div class="ex"><strong>donde</strong> = places</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ EJERCICIO 1 ═══ -->
+    <h3 class="subhead">Ejercicio 1 · Mixed Verb Conjugation</h3>
+    <div class="card">
+      <div class="card-title">Ejercicio 1 · Verbos — Mixed Conjugation Review <span class="pill">CH. 1–4</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Fill in with the correct form of the verb in parentheses. Accent marks checked flexibly — but try to type them.</p>
+
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text">Yo <input class="blk" id="e1_1" data-answer="soy" placeholder="___"> de Texas pero ahora <input class="blk" id="e1_1b" data-answer="estoy" placeholder="___"> en California. <span class="ex-hint">(ser / estar)</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text">¿Cómo <input class="blk" id="e1_2" data-answer="te llamas" placeholder="___"> (tú)? — Me <input class="blk" id="e1_2b" data-answer="llamo" placeholder="___"> Laura. <span class="ex-hint">(llamarse)</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text">Nosotros <input class="blk" id="e1_3" data-answer="vamos" placeholder="___"> a la biblioteca a estudiar esta tarde. <span class="ex-hint">(ir)</span></span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text">Ella <input class="blk" id="e1_4" data-answer="tiene" placeholder="___"> mucha tarea esta semana. <span class="ex-hint">(tener)</span></span></div>
+      <div class="ex-item"><span class="ex-num">5</span><span class="ex-text">¿Tú <input class="blk" id="e1_5" data-answer="sabes" placeholder="___"> cocinar paella? — Sí, yo <input class="blk" id="e1_5b" data-answer="sé" placeholder="___"> muy bien. <span class="ex-hint">(saber)</span></span></div>
+      <div class="ex-item"><span class="ex-num">6</span><span class="ex-text">Yo <input class="blk" id="e1_6" data-answer="conozco" placeholder="___"> a todos mis profesores de español. <span class="ex-hint">(conocer)</span></span></div>
+      <div class="ex-item"><span class="ex-num">7</span><span class="ex-text">Ellos <input class="blk" id="e1_7" data-answer="quieren" placeholder="___"> estudiar en Madrid el verano próximo. <span class="ex-hint">(querer · e→ie)</span></span></div>
+      <div class="ex-item"><span class="ex-num">8</span><span class="ex-text">El baño <input class="blk" id="e1_8" data-answer="está" placeholder="___"> muy limpio y la cocina <input class="blk" id="e1_8b" data-answer="es" placeholder="___"> moderna. <span class="ex-hint">(estar / ser)</span></span></div>
+      <div class="ex-item"><span class="ex-num">9</span><span class="ex-text">Yo <input class="blk" id="e1_9" data-answer="pongo" placeholder="___"> mis libros en la mochila antes de clase. <span class="ex-hint">(poner · yo irreg.)</span></span></div>
+      <div class="ex-item"><span class="ex-num">10</span><span class="ex-text">¿<input class="blk" id="e1_10" data-answer="van" placeholder="___"> (ustedes) al concierto este sábado? <span class="ex-hint">(ir)</span></span></div>
+      <div class="ex-item"><span class="ex-num">11</span><span class="ex-text">Ella no <input class="blk" id="e1_11" data-answer="entiende" placeholder="___"> la explicación del profesor. <span class="ex-hint">(entender · e→ie)</span></span></div>
+      <div class="ex-item"><span class="ex-num">12</span><span class="ex-text">Nosotros <input class="blk" id="e1_12" data-answer="salimos" placeholder="___"> con amigos los fines de semana. <span class="ex-hint">(salir)</span></span></div>
+
+      <button class="chk-btn" onclick="checkBlanks('e1_1,e1_1b,e1_2,e1_2b,e1_3,e1_4,e1_5,e1_5b,e1_6,e1_7,e1_8,e1_8b,e1_9,e1_10,e1_11,e1_12','rs_e1')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e1_1,e1_1b,e1_2,e1_2b,e1_3,e1_4,e1_5,e1_5b,e1_6,e1_7,e1_8,e1_8b,e1_9,e1_10,e1_11,e1_12','rs_e1')">Reset</button>
+      <div class="res-msg" id="rs_e1" aria-live="polite"></div>
+    </div>
+
+    <!-- ═══ EJERCICIO 2 ═══ -->
+    <h3 class="subhead">Ejercicio 2 · Transformations</h3>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 2A · Adjective Agreement <span class="pill">CONCORDANCIA</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Make the adjective agree with the new noun.</p>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text"><em>un cantante talentoso</em> → una cantante <input class="blk" id="e2a_1" data-answer="talentosa" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text"><em>la directora creativa</em> → los directores <input class="blk" id="e2a_2" data-answer="creativos" placeholder="___"></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text"><em>el estudiante trabajador</em> → las estudiantes <input class="blk" id="e2a_3" data-answer="trabajadoras" placeholder="___"></span></div>
+      <button class="chk-btn" onclick="checkBlanks('e2a_1,e2a_2,e2a_3','rs_e2a')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e2a_1,e2a_2,e2a_3','rs_e2a')">Reset</button>
+      <div class="res-msg" id="rs_e2a" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 2B · Definite Articles <span class="pill">EL / LA / LOS / LAS</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Write the correct definite article. Watch for gender traps!</p>
+      <div class="ex-item"><span class="ex-num">1</span><span class="ex-text"><input class="blk short" id="e2b_1" data-answer="el" placeholder="___"> examen <span class="ex-hint">(careful — masc. despite ending)</span></span></div>
+      <div class="ex-item"><span class="ex-num">2</span><span class="ex-text"><input class="blk short" id="e2b_2" data-answer="la" placeholder="___"> habitación <span class="ex-hint">(-ción rule)</span></span></div>
+      <div class="ex-item"><span class="ex-num">3</span><span class="ex-text"><input class="blk short" id="e2b_3" data-answer="las" placeholder="___"> residencias</span></div>
+      <div class="ex-item"><span class="ex-num">4</span><span class="ex-text"><input class="blk short" id="e2b_4" data-answer="el" placeholder="___"> laboratorio</span></div>
+      <button class="chk-btn" onclick="checkBlanks('e2b_1,e2b_2,e2b_3,e2b_4','rs_e2b')">Check Answers</button>
+      <button class="rst-btn" onclick="resetBlanks('e2b_1,e2b_2,e2b_3,e2b_4','rs_e2b')">Reset</button>
+      <div class="res-msg" id="rs_e2b" aria-live="polite"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 2C · Comparatives &amp; Superlatives <span class="pill">TRANSLATION</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Translate each sentence to Spanish. These are open-ended — write your version, then reveal the model.</p>
+
+      <ol style="padding-left:22px;font-size:0.97rem;line-height:1.9;color:var(--text);">
+        <li>The library is bigger than the cafeteria. → _______________________________________________</li>
+        <li>The gym is the most modern building on campus. → _______________________________________________</li>
+        <li>My room is as comfortable as my friend's room. → _______________________________________________</li>
+      </ol>
+
+      <button class="toggle-btn" onclick="toggleModel('modelBox2c')">📋 Show / hide model translations</button>
+
+      <div class="model-box" id="modelBox2c">
+        <div class="model-box-title">Sample translations</div>
+        <ol>
+          <li><em>La biblioteca es más grande que la cafetería.</em></li>
+          <li><em>El gimnasio es el edificio más moderno del campus.</em></li>
+          <li><em>Mi cuarto es tan cómodo como el cuarto de mi amigo/a.</em></li>
+        </ol>
+        <p style="margin-top:8px;color:var(--text-hint);font-style:italic;">Watch the gender agreement: cuarto (m.) → cómodo · habitación (f.) → cómoda.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ LECTURA ═══ -->
+  <section class="sec" id="sec-le">
+    <h2 class="sec-title">Parte 3 · Lectura</h2>
+    <p class="sec-sub">Comprensión de lectura · Read &amp; answer</p>
+
+    <div class="reading-box">
+      <div class="author">LECTURA · ME LLAMO ISABEL</div>
+      <p class="passage">
+        Me llamo <strong>Isabel Torres</strong> y soy colombiana. Estudio comunicaciones en SPSCC y también trabajo en una cafetería los fines de semana. Mi compañera de clase se llama <strong>Mia</strong> y es estadounidense. Ella sabe hablar tres idiomas: inglés, español y francés. Las dos vivimos cerca del campus, pero en barrios diferentes.
+        <br><br>
+        Mi apartamento está en el centro, que es el barrio más antiguo de la ciudad, pero también el más tranquilo. Mi habitación es bastante pequeña, pero está bien equipada. Hay una cocina compartida con mis compañeros de apartamento que es más grande que mi cuarto.
+        <br><br>
+        Me gusta mucho vivir aquí porque quiero practicar mi inglés y conocer a personas de todo el mundo. En mi opinión, mi barrio es mejor que los otros porque está más cerca del campus y de la biblioteca, que es el lugar donde estudio todos los días.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 3 · Preguntas de comprensión <span class="pill">6 ITEMS</span></div>
+      <p style="font-size:0.92rem;color:var(--text-light);margin-bottom:14px;">Answer in Spanish. Write your answer, then click "Show model answers" to compare.</p>
+
+      <ol style="padding-left:22px;font-size:0.97rem;line-height:2.0;color:var(--text);">
+        <li><em>¿De dónde es Isabel?</em></li>
+        <li><em>¿Cuántos idiomas habla Mia?</em></li>
+        <li><em>¿En qué parte de la ciudad vive Isabel?</em></li>
+        <li><em>¿Por qué le gusta a Isabel su barrio?</em> (Use <strong>porque</strong> in your answer.)</li>
+        <li><em>¿Qué dice Isabel sobre la cocina compartida?</em> (Use a comparative.)</li>
+        <li><em>Escribe 2 ejemplos del texto: uno de ser y uno de estar.</em></li>
+      </ol>
+
+      <button class="toggle-btn" onclick="toggleModel('modelBox3')">📋 Show / hide model answers</button>
+
+      <div class="model-box" id="modelBox3">
+        <div class="model-box-title">Sample answers</div>
+        <ol>
+          <li><em>Isabel es de Colombia. (Es colombiana.)</em></li>
+          <li><em>Mia habla tres idiomas: inglés, español y francés.</em></li>
+          <li><em>Isabel vive en el centro, que es el barrio más antiguo de la ciudad.</em></li>
+          <li><em>A Isabel le gusta su barrio porque está más cerca del campus y de la biblioteca.</em></li>
+          <li><em>Isabel dice que la cocina compartida es más grande que su cuarto.</em></li>
+          <li><em>SER: "soy colombiana" / "es el barrio más antiguo" · ESTAR: "está en el centro" / "está bien equipada"</em></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Strategy · How to read on the exam</div>
+      <div class="adj-grid">
+        <div class="adj-row" style="border-left:3px solid var(--terracotta);padding-left:13px;">
+          <div class="type">1 · Read once for gist</div>
+          <p style="font-size:0.88rem;color:var(--text);margin-top:4px;">Don't translate every word. Get the big picture: who, where, what.</p>
+        </div>
+        <div class="adj-row" style="border-left:3px solid var(--gold);padding-left:13px;">
+          <div class="type">2 · Read the questions</div>
+          <p style="font-size:0.88rem;color:var(--text);margin-top:4px;">Now you know what to look for — scan back for the answer.</p>
+        </div>
+        <div class="adj-row" style="border-left:3px solid var(--sage);padding-left:13px;">
+          <div class="type">3 · Answer in Spanish</div>
+          <p style="font-size:0.88rem;color:var(--text);margin-top:4px;">Use the passage's wording when you can. Full sentences score higher.</p>
+        </div>
+        <div class="adj-row" style="border-left:3px solid var(--plum);padding-left:13px;">
+          <div class="type">4 · Watch the verb cues</div>
+          <p style="font-size:0.88rem;color:var(--text);margin-top:4px;">"Use a comparative" / "Use porque" — follow exactly what the question asks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ESCRITURA ═══ -->
+  <section class="sec" id="sec-es">
+    <h2 class="sec-title">Parte 4 · Escritura + Examen Oral</h2>
+    <p class="sec-sub">Integrated paragraph · 120–150 words · 30 pts</p>
+
+    <div class="card">
+      <div class="card-title">Ejercicio 4 · Escritura integrada <span class="pill">120–150 PALABRAS</span></div>
+      <p style="font-size:0.95rem;color:var(--text-light);margin-bottom:14px;"><strong>The prompt:</strong> Write a paragraph (120–150 words) describing <strong>a person you admire AND the place where they live or work</strong>. Use at least <strong>8</strong> of the 10 structures in the checklist below.</p>
+
+      <div class="ojo">
+        <div class="ojo-title">Strategy</div>
+        <p>Start with <strong>SER + identity</strong> ("Mi tía Carmen es…"), add <strong>ESTAR or HAY</strong> for the place ("Vive en un barrio que está…"), weave in a <strong>comparative</strong> ("Es más creativa que…"), use <strong>gustar</strong> ("Le gusta…"), and close with <strong>porque or para</strong> ("…porque siempre me ayuda."). Tick off each structure as you write it.</p>
+      </div>
+
+      <p class="subhead">Estructuras a incluir · Tick as you use them:</p>
+      <div class="struct-list" id="struct-list">
+        <div class="struct-item"><input type="checkbox" id="st_1"><label for="st_1"><strong>ser</strong> (identity / description)</label></div>
+        <div class="struct-item"><input type="checkbox" id="st_2"><label for="st_2"><strong>estar</strong> (location / condition)</label></div>
+        <div class="struct-item"><input type="checkbox" id="st_3"><label for="st_3"><strong>hay</strong> (existence)</label></div>
+        <div class="struct-item"><input type="checkbox" id="st_4"><label for="st_4">adjective agreement (gender + number)</label></div>
+        <div class="struct-item"><input type="checkbox" id="st_5"><label for="st_5"><strong>gustar</strong></label></div>
+        <div class="struct-item"><input type="checkbox" id="st_6"><label for="st_6"><strong>querer + infinitive</strong></label></div>
+        <div class="struct-item"><input type="checkbox" id="st_7"><label for="st_7"><strong>saber</strong> or <strong>conocer</strong></label></div>
+        <div class="struct-item"><input type="checkbox" id="st_8"><label for="st_8">a comparative or superlative</label></div>
+        <div class="struct-item"><input type="checkbox" id="st_9"><label for="st_9">a relative clause (<strong>que</strong> / <strong>donde</strong>)</label></div>
+        <div class="struct-item"><input type="checkbox" id="st_10"><label for="st_10"><strong>porque</strong> or <strong>para</strong></label></div>
+      </div>
+
+      <p class="subhead">Tu párrafo · Your paragraph:</p>
+      <textarea class="wl-script" id="wl-text" placeholder="La persona que admiro es ___. Es ___ y trabaja en ___, que está ___.
+
+En su trabajo hay ___, pero también ___.
+
+Sé que le gusta ___ porque ___.
+
+Para mí, es la persona más ___ que conozco porque ___."></textarea>
+
+      <div class="wl-controls">
+        <div>
+          <span class="word-count" id="wc-wrap"><strong id="word-count">0 words</strong> · target 120–150</span>
+          <span class="save-status" id="save-status"></span>
+        </div>
+        <div class="wl-btns">
+          <button class="wl-btn copy" onclick="copyScript()">📋 Copy</button>
+          <button class="wl-btn clear" onclick="clearScript()">Clear</button>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="subhead">Examen Oral · 2-min Introduction + 2-min Place Description + Q&amp;A</h3>
+
+    <div class="oral-card">
+      <div class="label">PROMPT 1 · INTEGRATED INTRODUCTION</div>
+      <h3>Talk about yourself across all 4 chapters</h3>
+      <p>Introduce yourself fully (Ch. 1), describe a public figure you admire (Ch. 2), explain your Spanish learning goals (Ch. 3), and describe a place in your community (Ch. 4). 2 minutes total. Use <em>soy, me llamo, vivo, estudio, quiero, me gusta, conozco</em>, and at least one comparative.</p>
+    </div>
+
+    <div class="oral-card">
+      <div class="label">PROMPT 2 · CAMPUS / COMMUNITY TOUR</div>
+      <h3>Give a 2-minute tour</h3>
+      <p>Give a 2-minute tour of campus and the surrounding area to someone new, using <strong>ser/estar/hay</strong>, comparatives, superlatives, and relative clauses. Describe at least 4 places, include at least 2 opinions (<em>creo que… / me parece que…</em>), and finish with a question to your "visitor."</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Consejos · Last-Minute Tips</div>
+      <div class="adj-grid">
+        <div class="adj-row" style="border-left:3px solid var(--terracotta);padding-left:13px;">
+          <div class="type">Speak slowly &amp; clearly</div>
+          <p style="font-size:0.88rem;color:var(--text);margin-top:4px;">Fluency &gt; speed. Pause is fine. Don't fill with English schwa "uhhh."</p>
+        </div>
+        <div class="adj-row" style="border-left:3px solid var(--gold);padding-left:13px;">
+          <div class="type">If you get stuck</div>
+          <p style="font-size:0.88rem;color:var(--text);margin-top:4px;">Reach for a phrase you know: <em>"En mi opinión…" / "Por ejemplo…"</em></p>
+        </div>
+        <div class="adj-row" style="border-left:3px solid var(--sage);padding-left:13px;">
+          <div class="type">SER vs. ESTAR check</div>
+          <p style="font-size:0.88rem;color:var(--text);margin-top:4px;">If it's location of a thing / a temporary state → ESTAR. Identity / origin → SER.</p>
+        </div>
+        <div class="adj-row" style="border-left:3px solid var(--plum);padding-left:13px;">
+          <div class="type">Don't read</div>
+          <p style="font-size:0.88rem;color:var(--text);margin-top:4px;">Use bullet-style notes only. Eye contact &gt; perfect grammar.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="celebrate">
+      <h3>¡Felicitaciones! · Congratulations!</h3>
+      <p>You have completed Spanish 1. You can now introduce yourself, describe people and places, express your plans and opinions, and write in Spanish for real purposes. <strong>¡Sigue practicando!</strong></p>
+    </div>
+  </section>
+
+  <div class="footer">
+    SPSCC · Spanish 121 · Semana 10 · Repaso Final · Built for in-class &amp; self-study practice
+  </div>
+
+</div>
+
+<script>
+/* ────────────────────────────────────────────────────────
+   Tab switching
+   ──────────────────────────────────────────────────────── */
+function switchTab(tab, el){
+  document.querySelectorAll('.tab').forEach(function(b){
+    b.classList.remove('active');
+  });
+  document.querySelectorAll('.sec').forEach(function(s){s.classList.remove('active');});
+  if(el) el.classList.add('active');
+  var s = document.getElementById('sec-'+tab);
+  if(s) s.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ────────────────────────────────────────────────────────
+   Answer-checking — accent + case + whitespace tolerant
+   ──────────────────────────────────────────────────────── */
+function normalize(s){
+  if(!s) return '';
+  return s.toString()
+    .trim()
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g,'')
+    .replace(/\s+/g,' ');
+}
+
+function checkBlanks(idsCSV, resultId){
+  var ids = idsCSV.split(',');
+  var correct = 0, total = ids.length;
+  ids.forEach(function(id){
+    var el = document.getElementById(id);
+    if(!el) return;
+    var user = normalize(el.value);
+    var expected = normalize(el.getAttribute('data-answer'));
+    el.classList.remove('ok','ng');
+    if(user === expected){
+      el.classList.add('ok');
+      correct++;
+    } else {
+      el.classList.add('ng');
+    }
+  });
+  var msg = document.getElementById(resultId);
+  if(msg){
+    if(correct === total){
+      msg.textContent = '¡Perfecto! ' + correct + ' / ' + total + ' correctas. ✓';
+      msg.className = 'res-msg ok';
+    } else {
+      msg.textContent = correct + ' / ' + total + ' correctas. Revisa las marcadas en rojo.';
+      msg.className = 'res-msg ng';
+    }
+  }
+}
+
+function resetBlanks(idsCSV, resultId){
+  var ids = idsCSV.split(',');
+  ids.forEach(function(id){
+    var el = document.getElementById(id);
+    if(!el) return;
+    el.value = '';
+    el.classList.remove('ok','ng');
+  });
+  var msg = document.getElementById(resultId);
+  if(msg){ msg.textContent = ''; msg.className = 'res-msg'; }
+}
+
+function toggleModel(id){
+  var box = document.getElementById(id);
+  if(box) box.classList.toggle('show');
+}
+
+/* ────────────────────────────────────────────────────────
+   Writing textarea — word count + autosave
+   ──────────────────────────────────────────────────────── */
+var WL_KEY = 'span121_final_review_writing_draft';
+var saveTimer = null;
+
+function updateWC(){
+  var el = document.getElementById('wl-text');
+  if(!el) return;
+  var t = el.value;
+  var words = t.trim() ? t.trim().split(/\s+/).length : 0;
+  var wcEl = document.getElementById('word-count');
+  var wrap = document.getElementById('wc-wrap');
+  if(wcEl) wcEl.textContent = words + (words === 1 ? ' word' : ' words');
+  if(wrap){
+    wrap.classList.remove('in-range','out-of-range');
+    if(words >= 120 && words <= 150) wrap.classList.add('in-range');
+    else if(words > 0) wrap.classList.add('out-of-range');
+  }
+}
+
+function saveDraft(){
+  try {
+    var el = document.getElementById('wl-text');
+    if(!el) return;
+    localStorage.setItem(WL_KEY, el.value);
+    var s = document.getElementById('save-status');
+    if(s){
+      s.textContent = '✓ saved';
+      setTimeout(function(){ s.textContent = ''; }, 1500);
+    }
+  } catch(e){}
+}
+
+function loadDraft(){
+  try {
+    var saved = localStorage.getItem(WL_KEY);
+    if(saved){
+      var el = document.getElementById('wl-text');
+      if(el) el.value = saved;
+    }
+  } catch(e){}
+  updateWC();
+}
+
+function copyScript(){
+  var el = document.getElementById('wl-text');
+  if(!el) return;
+  el.select();
+  try {
+    navigator.clipboard.writeText(el.value).then(function(){
+      var s = document.getElementById('save-status');
+      if(s){
+        s.textContent = '✓ copied';
+        setTimeout(function(){ s.textContent = ''; }, 2000);
+      }
+    });
+  } catch(e){ document.execCommand('copy'); }
+}
+
+function clearScript(){
+  if(!confirm('Clear your entire paragraph? This cannot be undone.')) return;
+  var el = document.getElementById('wl-text');
+  if(el){ el.value = ''; updateWC(); saveDraft(); }
+}
+
+/* ────────────────────────────────────────────────────────
+   Topic checklist — persistent + progress + stats
+   ──────────────────────────────────────────────────────── */
+var CK_KEY = 'span121_final_review_topic_checklist';
+var CK_IDS = [
+  'ck1_1','ck1_2','ck1_3','ck1_4','ck1_5','ck1_6',
+  'ck2_1','ck2_2','ck2_3','ck2_4','ck2_5','ck2_6','ck2_7',
+  'ck3_1','ck3_2','ck3_3','ck3_4','ck3_5','ck3_6','ck3_7',
+  'ck4_1','ck4_2','ck4_3','ck4_4','ck4_5','ck4_6','ck4_7'
+];
+
+function loadChecklist(){
+  try {
+    var saved = JSON.parse(localStorage.getItem(CK_KEY) || '{}');
+    CK_IDS.forEach(function(id){
+      var el = document.getElementById(id);
+      if(el && saved[id]) el.checked = true;
+    });
+  } catch(e){}
+  updateStats();
+}
+
+function saveChecklist(){
+  try {
+    var state = {};
+    CK_IDS.forEach(function(id){
+      var el = document.getElementById(id);
+      if(el && el.checked) state[id] = true;
+    });
+    localStorage.setItem(CK_KEY, JSON.stringify(state));
+  } catch(e){}
+}
+
+function updateStats(){
+  var total = 0;
+  CK_IDS.forEach(function(id){
+    var el = document.getElementById(id);
+    if(el && el.checked) total++;
+  });
+  var pct = Math.round(total / CK_IDS.length * 100);
+  var totalEl = document.getElementById('stat-total');
+  var pctEl = document.getElementById('stat-pct');
+  var remainEl = document.getElementById('stat-remain');
+  if(totalEl) totalEl.textContent = total;
+  if(pctEl) pctEl.textContent = pct + '%';
+  if(remainEl) remainEl.textContent = CK_IDS.length - total;
+  var pf = document.getElementById('pf');
+  if(pf) pf.style.width = pct + '%';
+}
+
+/* ────────────────────────────────────────────────────────
+   Structure tracker (Escritura tab)
+   ──────────────────────────────────────────────────────── */
+var ST_KEY = 'span121_final_review_struct_tracker';
+var ST_IDS = ['st_1','st_2','st_3','st_4','st_5','st_6','st_7','st_8','st_9','st_10'];
+
+function loadStruct(){
+  try {
+    var saved = JSON.parse(localStorage.getItem(ST_KEY) || '{}');
+    ST_IDS.forEach(function(id){
+      var el = document.getElementById(id);
+      if(el && saved[id]) el.checked = true;
+    });
+  } catch(e){}
+}
+
+function saveStruct(){
+  try {
+    var state = {};
+    ST_IDS.forEach(function(id){
+      var el = document.getElementById(id);
+      if(el && el.checked) state[id] = true;
+    });
+    localStorage.setItem(ST_KEY, JSON.stringify(state));
+  } catch(e){}
+}
+
+/* ────────────────────────────────────────────────────────
+   Init
+   ──────────────────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', function(){
+  loadDraft();
+  loadChecklist();
+  loadStruct();
+
+  var vl = document.getElementById('wl-text');
+  if(vl){
+    vl.addEventListener('input', function(){
+      updateWC();
+      clearTimeout(saveTimer);
+      saveTimer = setTimeout(saveDraft, 600);
+    });
+  }
+
+  CK_IDS.forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.addEventListener('change', function(){ saveChecklist(); updateStats(); });
+  });
+
+  ST_IDS.forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.addEventListener('change', saveStruct);
+  });
+});
+</script>
+
+</body>
+</html>
